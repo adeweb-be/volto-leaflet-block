@@ -1,0 +1,23 @@
+@import (multiple, reference, optional) '../../theme.config';
+
+@type: 'extra';
+@element: 'custom';
+
+.leaflet-div-icon {
+  border: 0 !important;
+  background: none !important;
+}
+
+.icon-select-widget {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  .ui.card {
+    border: 1px solid white;
+    margin: 0.25em !important;
+    width: inherit;
+
+    &.active {
+      border: 1px solid @primaryColor;
+    }
+  }
+}

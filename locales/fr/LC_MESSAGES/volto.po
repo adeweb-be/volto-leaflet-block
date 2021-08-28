@@ -1,0 +1,65 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Plone\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-28T12:54:09.549Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Antoine Duchêne <contact@adeweb.be>\n"
+"Language: fr\n"
+"Language-Team: Adeweb Belgium <contact@adeweb.be>\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Language-Code: fr\n"
+"Language-Name: French\n"
+"Preferred-Encodings: utf-8\n"
+"Domain: volto\n"
+
+#: Blocks/LeafletBlock/schema
+msgid "Content"
+msgstr "Contenu"
+
+#: Blocks/LeafletBlock/schema
+msgid "Height"
+msgstr "Hauteur"
+
+#: Blocks/LeafletBlock/schema
+msgid "Icon"
+msgstr "Icône"
+
+#: Blocks/LeafletBlock/schema
+msgid "Latitude"
+msgstr "Latitude"
+
+#: Blocks/LeafletBlock/schema
+msgid "Longitude"
+msgstr "Longitude"
+
+#: Blocks/LeafletBlock/schema
+msgid "Map"
+msgstr "Carte"
+
+#: Blocks/LeafletBlock/schema
+msgid "Marker"
+msgstr "Marqueur"
+
+#: Blocks/LeafletBlock/schema
+msgid "Markers"
+msgstr "Marqueurs"
+
+#: Blocks/LeafletBlock/schema
+msgid "Style"
+msgstr "Style"
+
+#: Blocks/LeafletBlock/schema
+msgid "Title"
+msgstr "Titre"
+
+#: Blocks/LeafletBlock/schema
+msgid "Zoom"
+msgstr "Zoom"
+
+#: index
+msgid "leafletMap"
+msgstr "carte Leaflet"

@@ -1,0 +1,28 @@
+{
+  "name": "@adeweb-be/volto-leaflet-block",
+  "version": "0.1.0",
+  "description": "volto-leaflet-block: A Leaflet block for Volto",
+  "main": "src/index.js",
+  "license": "MIT",
+  "keywords": [
+    "volto-addon",
+    "volto",
+    "plone",
+    "react"
+  ],
+  "dependencies": {
+    "@plone/volto": ">=12.1.2",
+    "@monsonjeremy/react-leaflet": "3.2.2",
+    "@monsonjeremy/react-leaflet-core": "1.1.1",
+    "leaflet": "^1.7.1",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.14.5"
+  },
+  "devDependencies": {
+    "release-it": "^14.11.5",
+    "prettier": "^2.3.2"
+  },
+  "scripts": {
+    "i18n": "NODE_ENV=production node src/i18n.js",
+    "release": "release-it"
+  }
+}
