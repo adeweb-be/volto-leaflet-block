@@ -1,14 +1,16 @@
-import Marker from './Marker';
 import React from 'react';
 
+import config from '@plone/volto/registry';
 import { MapContainer, TileLayer, useMap } from '@monsonjeremy/react-leaflet';
 
+import Marker from './Marker';
 import '../../style/leaflet.less';
 
 const Map = (props) => {
   const { data } = props;
   const center = [parseFloat(data.latitude), parseFloat(data.longitude)];
   const zoom = parseInt(data.zoom);
+  const blockConfig = config.blocks.blocksConfig.leafletMap
 
   const MapControl = React.memo(({ center, zoom }) => {
     const map = useMap();
@@ -24,8 +26,8 @@ const Map = (props) => {
       <MapContainer center={center} zoom={zoom} style={{ height: '100%' }}>
         <MapControl center={center} zoom={zoom} />
         <TileLayer
-          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.de/{z}/{x}/{y}.png"
+          url={blockConfig.tilesLayerUrl}
+          attribution={blockConfig.tilesLayerAttribution}
         />
         {data.markers?.map((marker) => (
           <Marker key={marker['@id']} marker={marker} />

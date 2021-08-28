@@ -2,6 +2,7 @@ import { defineMessages } from 'react-intl';
 
 import IconSelectWidget from './Widgets/IconSelect';
 import { LeafletMapView, LeafletMapEdit } from './Blocks';
+
 import globeSVG from '@plone/volto/icons/globe.svg';
 import mapSVG from './icons/map.svg';
 import dangerSVG from './icons/danger.svg';
@@ -64,6 +65,8 @@ const leafletMapConfig = {
       iconAnchor: [20, 40],
     },
   },
+  tilesLayerUrl: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+  tilesLayerAttribution: "&copy; <a href=\"http://osm.org/copyright\">OpenStreetMap</a> contributors"
 };
 
 export function minimal(config) {
@@ -83,15 +86,6 @@ export default function baseInstall(config) {
     ...config.blocks.blocksConfig.leafletMap.markerIcons,
     ...iconsPreset,
   };
-
-  return config;
-}
-
-export function asDefault(config) {
-  config = baseInstall(config);
-
-  config.blocks.blocksConfig.maps = config.blocks.blocksConfig.leafletMap;
-  delete config.blocks.blocksConfig.leafletMap;
 
   return config;
 }
