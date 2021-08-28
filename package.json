@@ -1,6 +1,6 @@
 {
   "name": "@adeweb-be/volto-leaflet-block",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "volto-leaflet-block: A Leaflet block for Volto",
   "homepage": "https://github.com/adeweb-be/volto-leaflet-block",
   "private": false,
