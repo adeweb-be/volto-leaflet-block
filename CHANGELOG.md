@@ -1,6 +1,11 @@
 # Changelog
 
-## 0.1.0
-> 2020-08-28
+## 0.3.0 (unreleased)
+> 2021-xx-xx
 
-- Initial commit, nothing changed. [duchenean]
+Nothing changed yet.
+
+## 0.2.0
+> 2021-08-28
+
+- First public release [duchenean]
