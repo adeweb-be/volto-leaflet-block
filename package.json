@@ -16,10 +16,12 @@
     "react"
   ],
   "dependencies": {
-    "@plone/volto": ">=12.1.2",
     "@monsonjeremy/react-leaflet": "3.2.2",
     "@monsonjeremy/react-leaflet-core": "1.1.1",
     "leaflet": "^1.7.1"
+  },
+  "peerDependencies": {
+    "@plone/volto": ">=12.1.2"
   },
   "devDependencies": {
     "release-it": "^14.11.5",
