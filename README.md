@@ -1,5 +1,7 @@
 # Volto Leaflet Block
 
+![screenshot](https://user-images.githubusercontent.com/9050997/131229104-b4e37d7a-199d-4690-b043-e5c8f8738bde.png)
+
 ## Overview
 
 This package adds a new map block based on [Leaflet](https://github.com/Leaflet/Leaflet) and [React Leaflet](https://github.com/PaulLeCam/react-leaflet).
