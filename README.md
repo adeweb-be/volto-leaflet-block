@@ -30,16 +30,6 @@ This will install the minimum config for this addon.
 ```
 This will install the minimum config + some preset markers.
 
-### AsDefault
-```JSON
-"addons": [
-"@adeweb-be/volto-leaflet-block:asDefault"
-],
-```
-This will install the base config and will replace the default map block
-which is based on a Google Map iframe.
-
-
 ## Roadmap
 
 - Add Cypress tests
