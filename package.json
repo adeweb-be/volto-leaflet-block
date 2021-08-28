@@ -6,6 +6,9 @@
   "private": false,
   "main": "src/index.js",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "volto-addon",
     "volto",
