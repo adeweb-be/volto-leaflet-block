@@ -1,6 +1,7 @@
 # Volto Leaflet Block
 
-![screenshot](https://user-images.githubusercontent.com/9050997/131229104-b4e37d7a-199d-4690-b043-e5c8f8738bde.png)
+![screenshot](https://user-images.githubusercontent.com/9050997/131230653-5ec101ee-1e89-4c82-9544-0a3d3f45554f.png)
+
 
 ## Overview
 
