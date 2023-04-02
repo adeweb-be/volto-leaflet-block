@@ -49,7 +49,7 @@ const LeafletBlockEdit = (props) => {
           onChangeField={handleChange}
         />
       </SidebarPortal>
-      <Map data={data} />
+      <Map data={data} editMode={true} onChangeField={handleChange} />
     </>
   );
 };
