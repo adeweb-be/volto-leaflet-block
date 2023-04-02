@@ -1,4 +1,5 @@
 import { defineMessages } from 'react-intl';
+import config from '@plone/volto/registry';
 
 export const ILeafletMarkerSchema = (intl) => ({
   title: intl.formatMessage(messages.marker),
@@ -38,7 +39,7 @@ export const ILeafletMapSchema = (intl) => ({
     {
       id: 'default',
       title: 'Default',
-      fields: ['latitude', 'longitude', 'zoom'],
+      fields: ['latitude', 'longitude', 'zoom', 'tilesLayer'],
     },
     {
       id: 'content',
@@ -73,6 +74,12 @@ export const ILeafletMapSchema = (intl) => ({
       initialValue: 8,
       maximum: 18,
       minimum: 0,
+    },
+    tilesLayer: {
+      title: intl.formatMessage(messages.tilesLayer),
+      choices: config.blocks.blocksConfig.leafletMap.tileLayers.map((item) => {
+        return [item.id, item.name];
+      }),
     },
     height: {
       title: intl.formatMessage(messages.height),
@@ -131,5 +138,9 @@ const messages = defineMessages({
   style: {
     id: 'Style',
     defaultMessage: 'Style',
+  },
+  tilesLayer: {
+    id: 'Tiles Layer',
+    defaultMessage: 'Tiles layer',
   },
 });
