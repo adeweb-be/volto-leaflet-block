@@ -4,7 +4,7 @@ import L from 'leaflet';
 import { Marker as LeafletMarker } from '@monsonjeremy/react-leaflet';
 
 const Marker = (props) => {
-  const { marker } = props;
+  const { marker, children } = props;
   const { icon: iconId, latitude, longitude } = marker;
 
   const markersIcons = config.blocks.blocksConfig.leafletMap.markerIcons;
@@ -29,7 +29,9 @@ const Marker = (props) => {
 
   if (latitude && longitude) {
     return (
-      <LeafletMarker icon={leafletIcon} position={[latitude, longitude]} />
+      <LeafletMarker icon={leafletIcon} position={[latitude, longitude]}>
+        {children}
+      </LeafletMarker>
     );
   }
   return null;
