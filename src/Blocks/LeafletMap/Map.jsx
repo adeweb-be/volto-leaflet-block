@@ -10,7 +10,7 @@ const Map = (props) => {
   const { data } = props;
   const center = [parseFloat(data.latitude), parseFloat(data.longitude)];
   const zoom = parseInt(data.zoom);
-  const blockConfig = config.blocks.blocksConfig.leafletMap
+  const blockConfig = config.blocks.blocksConfig.leafletMap;
 
   const MapControl = React.memo(({ center, zoom }) => {
     const map = useMap();
@@ -21,13 +21,21 @@ const Map = (props) => {
     return null;
   });
 
+  const selectedLayer = blockConfig.tileLayers.filter(
+    (item) => item.id === data.tilesLayer,
+  )[0];
+
   return (
     <div className="leaflet-wrapper" style={{ height: data.height }}>
       <MapContainer center={center} zoom={zoom} style={{ height: '100%' }}>
         <MapControl center={center} zoom={zoom} />
         <TileLayer
-          url={blockConfig.tilesLayerUrl}
-          attribution={blockConfig.tilesLayerAttribution}
+          url={selectedLayer ? selectedLayer.url : blockConfig.tilesLayerUrl}
+          attribution={
+            selectedLayer
+              ? selectedLayer.attribution
+              : blockConfig.tilesLayerAttribution
+          }
         />
         {data.markers?.map((marker) => (
           <Marker key={marker['@id']} marker={marker} />
